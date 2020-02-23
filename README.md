@@ -1,8 +1,8 @@
 # VBA-AFDA-Report
 Allowance for Doubtful Accounts Multilingual Report Tool PTBR/ESP in VBA
 
-<img src=”figures/repository-open-graph-template.png"
-height="800" width="800">
+
+
 ![](figures/repository-open-graph-template.png)
 
 
