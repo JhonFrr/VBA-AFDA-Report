@@ -14,8 +14,8 @@ Attribute Clear_Report.VB_ProcData.VB_Invoke_Func = "l\n14"
 
     Application.ScreenUpdating = False
     
-    ActiveCell.Offset(1, 0).Rows("1:1").EntireRow.Select
     Rows("11:11").Select
+    Range(Selection, Selection.End(xlDown)).Select
     Range(Selection, Selection.End(xlDown)).Select
     Selection.Clear
     Rows("10:10").Select
@@ -60,14 +60,14 @@ Attribute EditHide_LayoutBackup.VB_ProcData.VB_Invoke_Func = "R\n14"
 
 ' Atalho do teclado: Ctrl+Shift+r
 
-If Worksheets("LAYOUT BACKUP").Visible = xlVeryHidden Then
+If Worksheets("LAYOUT BACKUP").Visible = xlSheetHidden Then
 
 Worksheets("LAYOUT BACKUP").Visible = xlSheetVisible
 Worksheets("LAYOUT BACKUP").Activate
 
 Else
 
-Worksheets("LAYOUT BACKUP").Visible = xlVeryHidden
+Worksheets("LAYOUT BACKUP").Visible = xlSheetHidden
 
 End If
 
