@@ -8,10 +8,9 @@ A tool for Baxter International Inc., in order to replace a pre-existing report 
 Applicability:
 The tool generates Allowance for Doubtful Accounts Reports based on the Accounts Receivable Aging data (AR Aging is another periodic report that categorizes a company's accounts receivable according to the length of time an invoice has been outstanding).
 
-<p align="center"> 
-<img src="figures/Processando.JPG">
-</p>
-
 <img src="figures/repository-open-graph.png">
 </p>
 
+<p align="center"> 
+<img src="figures/Processando.JPG">
+</p>
