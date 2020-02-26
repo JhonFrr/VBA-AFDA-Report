@@ -2,11 +2,12 @@
 
 ### **_Allowance for Doubtful Accounts Multilingual Report Tool PTBR/ESP in VBA_**
 
+<p align="center"> 
 <img src="figures/repository-open-graph.png">
 </p>
 
 <p align="center"> 
-<img src="figures/Processando.JPG">
+<img src="figures/Processando.png">
 </p>
 
 #### Purpose:
