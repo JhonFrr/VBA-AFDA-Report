@@ -10,15 +10,20 @@ Sub Get_Data()
     
     'Travamento de tela é ativado no procedimento que chama a macro
     '(Código da Userform Processando)e destivado ao final da mesma.
-    
+    Dim ToolFile As String
+    ToolFile = ThisWorkbook.name
     Dim ARGeral As String
     ARGeral = UserForm_Settings.TextBox_ArquivoAging.Text
     'Cria uma variável referente ao nome do arquivo aberto com os dados
     'do Aging e atribui ao texto inserido na caixa do menu opções.
     
-    
     Dim i As Integer, pctCompl As Single
+    If UserForm_Idioma.ToggleButton_Português = True Then
     UserForm_Processando.Label_Processando.Caption = "Processando..."
+    Else
+    UserForm_Processando.Label_Processando.Caption = "Procesando..."
+    End If
+    
     i = 0
     pctCompl = i
     progress pctCompl
@@ -28,7 +33,7 @@ Sub Get_Data()
     Windows(ARGeral).Activate
     'Tratamento de erro para arquivo aging não reconhecido: caso falhe ao ativar o aging, o código será
     'levado à uma seção onde informa o usuário sobre o erro, como proceder e interrompe o procedimento.
-    
+    On Error GoTo 0
     'Caso não haja erro, o código prosseguirá com a filtragem e manipulação dos dados do Aging.
     
     'Os procedimentos abaixo separam as colunas importantes e realizam algumas exceções por filtragem.
@@ -380,7 +385,7 @@ Sub Get_Data()
     ActiveSheet.Paste
     Application.CutCopyMode = False
     
-    Windows("AFDA Report.xlsm").Activate
+    Windows(ToolFile).Activate
     
     Call Clear_Report
     
@@ -396,7 +401,7 @@ Sub Get_Data()
     Range(Selection, Selection.Offset(1, 0)).Select
     Selection.Copy
 
-    Windows("AFDA Report.xlsm").Activate
+    Windows(ToolFile).Activate
 
     Range("A10").Select
     Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
@@ -471,22 +476,32 @@ Sub Get_Data()
     i = 100
     pctCompl = i
     progress pctCompl
+    If UserForm_Idioma.ToggleButton_Português = True Then
     UserForm_Processando.Label_Processando.Caption = "Concluído!"
+    Else
+    UserForm_Processando.Label_Processando.Caption = "Hecho!"
+    End If
+    
     Application.ScreenUpdating = True
+    
+          
+        Windows(ARGeral).Activate
+    
+        Application.DisplayAlerts = False
 
-    Windows(ARGeral).Visible = True
+        ActiveWorkbook.Close
 
+        Application.DisplayAlerts = True
     
     Exit Sub
     
 Erro_nome_do_arquivo:
 
     Unload UserForm_Processando
-If UserForm_RelatórioPDD.CommandButton_Process.Caption = "Processar" Then
-    MsgBox "Certifique-se de que o Aging está aberto e nomeado como """ & ARGeral & """(Manual Página 4)", vbOKOnly, "Aging não encontrado"
-    End If
-If UserForm_RelatórioPDD.CommandButton_Process.Caption = "Procesar" Then
-    MsgBox "Asegúrese de que el archivo esté abierto y nombrado como """ & ARGeral & """(Manual Página 4)", vbOKOnly, "Aging no encontrado"
+If UserForm_Idioma.ToggleButton_Português.Value = True Then
+    MsgBox "Certifique-se de que o arquivo Aging está aberto, com edição habilitada e nomeado como """ & ARGeral & """(Manual Página 4)", vbOKOnly, "Aging não Reconhecido"
+    Else
+    MsgBox "Asegúrese de que el archivo Aging esté abierto, con edición habilitada y nombrado como """ & ARGeral & """(Manual Página 4)", vbOKOnly, "Aging no Reconocido"
     End If
     
 End Sub

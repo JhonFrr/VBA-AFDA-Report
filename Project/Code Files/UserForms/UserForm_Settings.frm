@@ -1,7 +1,7 @@
 VERSION 5.00
 Begin {C62A69F0-16DC-11CE-9E98-00AA00574A4F} UserForm_Settings 
    Caption         =   "Configuração"
-   ClientHeight    =   3530
+   ClientHeight    =   3525
    ClientLeft      =   300
    ClientTop       =   1170
    ClientWidth     =   6255

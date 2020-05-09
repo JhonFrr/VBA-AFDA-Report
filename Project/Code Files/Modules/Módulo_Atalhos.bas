@@ -17,6 +17,7 @@ Attribute Clear_Report.VB_ProcData.VB_Invoke_Func = "l\n14"
     Rows("11:11").Select
     Range(Selection, Selection.End(xlDown)).Select
     Range(Selection, Selection.End(xlDown)).Select
+    Range(Selection, Selection.End(xlDown)).Select
     Selection.Clear
     Rows("10:10").Select
     Selection.ClearContents
@@ -33,24 +34,23 @@ Attribute Restore_Layout.VB_ProcData.VB_Invoke_Func = "r\n14"
 Application.ScreenUpdating = False
 
 If UserForm_Idioma.ToggleButton_Español.Value = True Then
-Worksheets("LAYOUT BACKUP").Activate
-Range("A11:R20").Copy
+Worksheets("LAYOUT BACKUP").Range("A11:R20").Copy
 Worksheets(1).Activate
 Range("A1").Activate
 ActiveSheet.Paste
-
+Sheets(1).name = "INFORME"
 Else
 
-Worksheets("LAYOUT BACKUP").Activate
-Range("A1:R10").Copy
+Worksheets("LAYOUT BACKUP").Range("A1:R10").Copy
 Worksheets(1).Activate
 Range("A1").Activate
 ActiveSheet.Paste
-Sheets(1).Name = "AGING - TOTAL ABERTO PARA PDD"
-
+Sheets(1).name = "RELATÓRIO"
 End If
 
-Call Clear_Report
+If Not ActiveSheet.AutoFilterMode Then
+Range("A9:Q9").AutoFilter
+End If
 
 Application.ScreenUpdating = True
 
@@ -59,6 +59,8 @@ Sub EditHide_LayoutBackup()
 Attribute EditHide_LayoutBackup.VB_ProcData.VB_Invoke_Func = "R\n14"
 
 ' Atalho do teclado: Ctrl+Shift+r
+
+
 
 If Worksheets("LAYOUT BACKUP").Visible = xlSheetHidden Then
 

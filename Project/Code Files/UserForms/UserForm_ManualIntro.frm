@@ -22,8 +22,8 @@ Label_Title.Caption = "Manual de Usuário"
 Label_Intro.Caption = "Esta ferramenta foi desenvolvida com o intuito de automatizar" & vbNewLine & _
 "a geração do relatório Provisão de Devedores Duvidosos." & vbNewLine & _
 "O manual a seguir possui algumas informações básicas sobre" & vbNewLine & _
-"sua utilização, em caso de maiores dúvidas, problemas, ou" & vbNewLine & _
-"sugestões, por favor entre em contato:"
+"sua utilização, em caso de maiores dúvidas ou problemas" & vbNewLine & _
+"por favor entre em contato:"
 Label_Contact.Caption = "João Ferreira" & vbNewLine & _
 "Credit & Collect Apprentice" & vbNewLine & _
 "Avenida Dr. Chucri Zaidan, nº 1.240" & vbNewLine & _
@@ -42,8 +42,8 @@ Label_Title.Caption = "Manual de Usuario"
 Label_Intro.Caption = "Esta herramienta fue desarrollada con el intuito de" & vbNewLine & _
 "automatizar la generación del informe Provisión de Incobrables." & vbNewLine & _
 "El siguiente manual tiene algunas informaciones básicas sobre" & vbNewLine & _
-"su utilización, en caso de mayores dudas, problemas, o" & vbNewLine & _
-"sugestiones, por favor entre en contacto:"
+"su utilización, en caso de mayores dudas o problemas" & vbNewLine & _
+"por favor entre en contacto:"
 Label_Contact.Caption = "João Ferreira" & vbNewLine & _
 "Credit & Collect Apprentice" & vbNewLine & _
 "Avenida Dr. Chucri Zaidan, nº 1.240" & vbNewLine & _

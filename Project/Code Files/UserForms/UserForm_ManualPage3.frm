@@ -51,8 +51,8 @@ Label_Text_MesAno.Caption = "" & vbNewLine & _
 Label_Title_DataFech.Caption = """Data Fechamento"""
 
 Label_Text_DataFech.Caption = "Seleciona a data de" & vbNewLine & _
-"fechamento do mês para" & vbNewLine & _
-"cálculo dos dias vencidos." & vbNewLine & _
+"fechamento contábil do mês" & vbNewLine & _
+"para cálculo dos dias vencidos." & vbNewLine & _
 "(Sugere automáticamente" & vbNewLine & _
 "o último dia útil do mês" & vbNewLine & _
 "selecionado, permitindo a" & vbNewLine & _
@@ -87,8 +87,8 @@ Label_Title_DataFech.Caption = """Fecha Cierre"""
 Label_Text_DataFech.Caption = "" & vbNewLine & _
 "" & vbNewLine & _
 "Selecciona la fecha" & vbNewLine & _
-"cierre del mes para el" & vbNewLine & _
-"cálculo de días vencidos." & vbNewLine & _
+"cierre contable del mes para" & vbNewLine & _
+"el cálculo de días vencidos." & vbNewLine & _
 "(Sugiere automáticamente" & vbNewLine & _
 "el último día hábil del mes" & vbNewLine & _
 "seleccionado, permitiendo el" & vbNewLine & _
