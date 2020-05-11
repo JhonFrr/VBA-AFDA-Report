@@ -22,7 +22,7 @@ Else
 UserForm_Processando.Caption = "Indicador de Progresso"
 End If
 
-Application.ScreenUpdating = False
+'Application.ScreenUpdating = False
 Call Get_Data
-Application.ScreenUpdating = True
+'Application.ScreenUpdating = True
 End Sub

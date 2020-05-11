@@ -22,6 +22,10 @@ Private Sub Label10_Click()
 
 End Sub
 
+Private Sub Label_Text_DataFech_Click()
+
+End Sub
+
 Private Sub Label_Text_Process_Click()
 
 End Sub
@@ -50,7 +54,8 @@ Label_Text_MesAno.Caption = "" & vbNewLine & _
 
 Label_Title_DataFech.Caption = """Data Fechamento"""
 
-Label_Text_DataFech.Caption = "Seleciona a data de" & vbNewLine & _
+Label_Text_DataFech.Caption = vbNewLine & _
+"Seleciona a data de" & vbNewLine & _
 "fechamento contábil do mês" & vbNewLine & _
 "para cálculo dos dias vencidos." & vbNewLine & _
 "(Sugere automáticamente" & vbNewLine & _

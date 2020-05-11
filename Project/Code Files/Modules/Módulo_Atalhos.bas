@@ -14,13 +14,8 @@ Attribute Clear_Report.VB_ProcData.VB_Invoke_Func = "l\n14"
 
     Application.ScreenUpdating = False
     
-    Rows("11:11").Select
-    Range(Selection, Selection.End(xlDown)).Select
-    Range(Selection, Selection.End(xlDown)).Select
-    Range(Selection, Selection.End(xlDown)).Select
-    Selection.Clear
-    Rows("10:10").Select
-    Selection.ClearContents
+    Range(Range("A11:R11"), Range("A11:R11").End(xlDown).Offset(1, 0)).Clear
+    Range("A10:R10").ClearContents
     
     Application.ScreenUpdating = True
     
