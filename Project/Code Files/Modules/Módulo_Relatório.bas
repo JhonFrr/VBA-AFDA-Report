@@ -108,7 +108,7 @@ ActiveSheet.DisplayPageBreaks = False 'Desabilita as quebras de páginas
     
     With Worksheets(2).AutoFilter.Range
     Dim Exceptions As Range
-    Set Exceptions = Range(Range("A" & .Offset(1, 0).SpecialCells(xlCellTypeVisible)(1).Row), Range("N" & .Offset(1, 0).SpecialCells(xlCellTypeVisible)(1).Row).End(xlDown))
+    Set Exceptions = Range(Range("A" & .Offset(1, 0).SpecialCells(xlCellTypeVisible)(1).Row), Range("N" & .Offset(1, 0).SpecialCells(xlCellTypeVisible)(1).Row).End(xlDown)).SpecialCells(xlCellTypeVisible)
     End With
     Exceptions.Delete Shift:=xlUp
     ActiveSheet.ShowAllData
@@ -118,7 +118,7 @@ ActiveSheet.DisplayPageBreaks = False 'Desabilita as quebras de páginas
     'Separa somente as notas vencidas a mais de 180 dias (excluindo as que ficaram vazias (vazio = critério "falso" na fórmula))
     With Worksheets(2).AutoFilter.Range
     Dim MenorIgua180 As Range
-    Set MenorIgua180 = Range(Range("A" & .Offset(1, 0).SpecialCells(xlCellTypeVisible)(1).Row), Range("N" & .Offset(1, 0).SpecialCells(xlCellTypeVisible)(1).Row).End(xlDown))
+    Set MenorIgua180 = Range(Range("A" & .Offset(1, 0).SpecialCells(xlCellTypeVisible)(1).Row), Range("N" & .Offset(1, 0).SpecialCells(xlCellTypeVisible)(1).Row).End(xlDown)).SpecialCells(xlCellTypeVisible)
     End With
     MenorIgua180.Delete Shift:=xlUp
     ActiveSheet.ShowAllData
