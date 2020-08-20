@@ -376,7 +376,7 @@ ActiveSheet.DisplayPageBreaks = False 'Desabilita as quebras de páginas
     
     Totais.Value = Totais.Value
     'Mantém apenas o resultado das fórmulas
-    
+
     'Destaque dos Totais com formatação
     Totais.Borders(xlDiagonalDown).LineStyle = xlNone
     Totais.Borders(xlDiagonalUp).LineStyle = xlNone
@@ -417,16 +417,16 @@ ActiveSheet.DisplayPageBreaks = False 'Desabilita as quebras de páginas
     pctCompl = i
     progress pctCompl
     If UserForm_Idioma.ToggleButton_Português = True Then
-    UserForm_Processando.Label_Processando.Caption = "Concluído!"
+        UserForm_Processando.Label_Processando.Caption = "Concluído!"
     Else
-    UserForm_Processando.Label_Processando.Caption = "Hecho!"
+        UserForm_Processando.Label_Processando.Caption = "Hecho!"
     End If
     
     Application.ScreenUpdating = True
     
         Application.DisplayAlerts = False
 
-        Workbooks(ARGeral).Close
+        'Workbooks(ARGeral).Close
 
         Application.DisplayAlerts = True
 'REATIVANDO RECURSOS DESATIVADOS <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
@@ -434,7 +434,7 @@ Application.ScreenUpdating = True 'Reabilita atualização de tela
 Application.Calculation = xlAutomatic 'Reabilita o calculo automatico
 Application.DisplayStatusBar = True 'Reabilita atualização da barra de status
 Application.EnableEvents = True 'Reabilita os eventos no excel
-ActiveSheet.DisplayPageBreaks = True 'Reabilita as quebras de páginas
+
 '<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
     Exit Sub
@@ -452,7 +452,6 @@ Application.ScreenUpdating = True 'Reabilita atualização de tela
 Application.Calculation = xlAutomatic 'Reabilita o calculo automatico
 Application.DisplayStatusBar = True 'Reabilita atualização da barra de status
 Application.EnableEvents = True 'Reabilita os eventos no excel
-ActiveSheet.DisplayPageBreaks = True 'Reabilita as quebras de páginas
 '<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
     Exit Sub
@@ -470,7 +469,6 @@ Application.ScreenUpdating = True 'Reabilita atualização de tela
 Application.Calculation = xlAutomatic 'Reabilita o calculo automatico
 Application.DisplayStatusBar = True 'Reabilita atualização da barra de status
 Application.EnableEvents = True 'Reabilita os eventos no excel
-ActiveSheet.DisplayPageBreaks = True 'Reabilita as quebras de páginas
 '<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 End Sub
